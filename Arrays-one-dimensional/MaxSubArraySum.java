@@ -18,7 +18,7 @@ public class MaxSubArraySum {
 
         // Initializing start and end index
         int si = -1, ei = -1; 
-        int tempStart = -1;
+        int tempStart = 0;
         for(int i=0; i<N; i++){
             sum += A[i];
             if(sum < 0){
