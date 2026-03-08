@@ -33,10 +33,19 @@ class BasicProblems {
             System.out.println(K + " not found in Linked List");
         }
 
+        System.out.println(" ");
+
         // -------- INSERTION TEST --------
         head = insertionInLL(head, 2, 25);
 
         System.out.println("Linked List after insertion:");
+        printList(head);
+        
+        System.out.println(" ");
+
+        //DELETION TEST
+        System.out.println("Linked List after deletion:");
+        head = deletionInLL(head, 30);
         printList(head);
     }
 
@@ -71,6 +80,28 @@ class BasicProblems {
         }
         nn.next = temp.next;
         temp.next = nn;
+        return head;
+    }
+
+    //Delition in Linked List
+    public static ListNode deletionInLL(ListNode head, int K){
+        if(head == null){
+            return null;
+        }
+        if(head.val == K){
+            return head.next;
+        }
+
+        ListNode temp = head;
+
+        while(temp.next != null){
+            if(temp.next.val == K){
+                temp.next = temp.next.next;
+                break;
+            }
+            temp = temp.next;
+        }
+
         return head;
     }
 
