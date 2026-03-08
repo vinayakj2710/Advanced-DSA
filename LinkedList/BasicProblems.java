@@ -32,6 +32,12 @@ class BasicProblems {
         } else {
             System.out.println(K + " not found in Linked List");
         }
+
+        // -------- INSERTION TEST --------
+        head = insertionInLL(head, 2, 25);
+
+        System.out.println("Linked List after insertion:");
+        printList(head);
     }
 
     //Search in Linked List
@@ -46,4 +52,38 @@ class BasicProblems {
         }
         return -1;
     } 
+
+    //Insertion in Linked List
+    public static ListNode insertionInLL(ListNode head, int idx, int K){
+        ListNode nn = new ListNode(K);
+        if(idx == 0){
+            nn.next = head;
+            head = nn;
+            return head;
+        }
+
+        ListNode temp = head;
+        for(int i=0; i<idx-1 && temp!=null ; i++){
+            temp = temp.next;
+        }
+        if(temp == null){
+            return head;
+        }
+        nn.next = temp.next;
+        temp.next = nn;
+        return head;
+    }
+
+
+    // Print Linked List
+    public static void printList(ListNode head){
+        ListNode temp = head;
+
+        while(temp != null){
+            System.out.print(temp.val + " -> ");
+            temp = temp.next;
+        }
+
+        System.out.println("null");
+    }
 }
