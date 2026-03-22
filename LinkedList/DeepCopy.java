@@ -69,7 +69,7 @@ public class DeepCopy{
             temp = temp.next.next;
         }
 
-        //Extraction
+        //Extraction the cloned node
 
         ListNode chead = head.next;
         temp = head;
