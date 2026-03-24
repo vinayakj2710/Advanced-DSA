@@ -30,6 +30,7 @@ public class ReverseLinkedList{
         if(head == null){
             return head;
         }
+        //Preserve previous and current node
         ListNode prev = null;
         ListNode curr = head;
 
@@ -43,6 +44,8 @@ public class ReverseLinkedList{
         head = prev;
         return head;
     }
+
+    //Print Linked list
 
     public static void printList(ListNode A){
         ListNode temp = A;
