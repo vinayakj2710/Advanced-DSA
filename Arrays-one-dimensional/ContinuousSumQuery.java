@@ -14,6 +14,8 @@ public class ContinuousSumQuery {
         System.out.println(res);
     }
 
+    // Continuous sum query
+
     public static ArrayList<Integer> sumQuery (int A, ArrayList<ArrayList<Integer>> B){
         ArrayList<Integer> res = new ArrayList<>(Collections.nCopies(A, 0));
         for(int i=0; i<B.size(); i++){

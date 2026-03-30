@@ -18,6 +18,8 @@ public class MergeIntervals {
         }
     }
 
+    // Merge intersecting intervals
+
     private static ArrayList<ArrayList<Integer>> mergedIntervals(int[][] A){
         int N = A.length;
         int si = A[0][0], ei = A[0][1];
