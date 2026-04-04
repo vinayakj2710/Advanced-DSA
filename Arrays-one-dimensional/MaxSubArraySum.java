@@ -2,14 +2,17 @@ import java.util.*;
 
 public class MaxSubArraySum {
     public static void main (String args[]){
+
         int[] A = {-2,3,4,-1,5,-10,7};
+
         ArrayList<Integer> result = maxSubArrSum(A);
+        
         System.out.println("Max Sum: " + result.get(0));
         System.out.println("Start Index: " + result.get(1));
         System.out.println("End Index: " + result.get(2));
     }
 
-    //Kadan's Algorithm 
+    //Kadan's Algorithm to find max sub array sum
     public static ArrayList<Integer> maxSubArrSum (int[] A){
         int N = A.length;
         int maxSum = Integer.MIN_VALUE;
