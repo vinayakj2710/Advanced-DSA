@@ -42,7 +42,7 @@ class TreeTraversal{
         }
 
     public static void main(String args[]){
-        System.out.println("In depth traversal in tree structure");
+        System.out.println("Depth First traversal in tree structure");
 
         TreeTraversal tree = new TreeTraversal();
 
