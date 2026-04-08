@@ -16,7 +16,7 @@ class BinarySearchTree{
 
     /* Search in BST */
 
-    /* Recursive Search */
+    /* Recursive method Search */
     public static boolean recursiveSearch(TreeNode node, int B){
         if(node == null) return false;
 
@@ -26,6 +26,24 @@ class BinarySearchTree{
         }else{
            return recursiveSearch(node.left, B);
         }
+    }
+
+    /* Iterative method search */
+    public static boolean iterativeSearch(TreeNode node, int B){
+        if(node == null) return false;
+
+        TreeNode temp = node;
+
+        while(temp != null){
+            if(temp.val == B){
+                return true;
+            }else if(temp.val < B){
+                temp = temp.right;
+            }else{
+                temp = temp.left;
+            }
+        }
+        return false;
     }
 
     public static void main(String args[]){
@@ -41,6 +59,9 @@ class BinarySearchTree{
 
         System.out.println(recursiveSearch(root, 7));  // true
         System.out.println(recursiveSearch(root, 20)); // false
+
+        System.out.println(iterativeSearch(root, 7));  // true
+        System.out.println(iterativeSearch(root, 20)); // false
     }
 
 }
