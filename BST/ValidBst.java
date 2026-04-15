@@ -23,7 +23,10 @@ class ValidBst{
     }
 
     public static void inOrder(Node curr){
+        //Edge case
         if(curr == null) return;
+
+        //Using inorder to validate BST
         inOrder(curr.left);
 
         if(prev != null && prev.val > curr.val){
